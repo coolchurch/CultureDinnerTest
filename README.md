@@ -1,2 +1,0 @@
-# CultureDinnerTest
-Spiritual Gifts Test
