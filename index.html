@@ -6,7 +6,7 @@
 <title>Dream Team Assessment — COOL Church</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f7f7f5;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:0}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:#f7f7f5;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:0}
 .app{width:100%;max-width:480px;min-height:100vh;background:#fff;position:relative}
 .screen{display:none;padding:2rem 1.5rem 3rem}
 .screen.active{display:block}
@@ -15,58 +15,58 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .welcome-logo-wrap{background:#fff;padding:2rem 1.5rem 1.5rem;text-align:center;border-bottom:1px solid #f0f0ee}
 .welcome-logo{max-width:180px;height:auto}
 .welcome-body{padding:1.75rem 1.5rem 2rem}
-.welcome-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:.75rem}
+.welcome-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#2a6a00;margin-bottom:.75rem}
 .welcome-title{font-size:26px;font-weight:700;color:#111;line-height:1.25;margin-bottom:.75rem}
 .welcome-sub{font-size:15px;color:#555;line-height:1.65;margin-bottom:1.5rem}
 .pills{display:flex;gap:.625rem;flex-wrap:wrap;margin-bottom:1.75rem}
-.pill{display:inline-flex;align-items:center;gap:5px;background:#f2f1fe;color:#4a42b0;font-size:12px;font-weight:500;padding:.35rem .8rem;border-radius:20px}
+.pill{display:inline-flex;align-items:center;gap:5px;background:#f4fce6;color:#2a4a00;font-size:12px;font-weight:500;padding:.35rem .8rem;border-radius:20px}
 .field-label{font-size:12px;font-weight:600;color:#444;letter-spacing:.03em;margin-bottom:.4rem}
 .input{width:100%;padding:.8rem 1rem;border:1.5px solid #e5e5e3;border-radius:10px;font-size:15px;color:#111;background:#fff;margin-bottom:.875rem;outline:none;transition:border .15s}
-.input:focus{border-color:#534AB7}
+.input:focus{border-color:#1a1a1a}
 .err{font-size:12px;color:#c0392b;margin-bottom:.875rem;display:none}
-.start-btn{width:100%;padding:1rem;background:#534AB7;color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:.01em}
-.start-btn:hover{background:#4a42b0}
+.start-btn{width:100%;padding:1rem;background:#C8F135;color:#111;border:none;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:.01em}
+.start-btn:hover{background:#b3d930}
 .welcome-footer{font-size:11px;color:#aaa;text-align:center;margin-top:1.25rem;line-height:1.6}
 
 /* Question */
 .q-header{padding:1.5rem 1.5rem 0}
 .prog-wrap{background:#eeeef0;border-radius:4px;height:4px;margin-bottom:1.25rem}
-.prog-fill{background:#534AB7;height:4px;border-radius:4px;transition:width .3s}
+.prog-fill{background:#C8F135;height:4px;border-radius:4px;transition:width .3s}
 .q-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
-.q-sec{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#534AB7}
+.q-sec{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1a1a1a}
 .q-num{font-size:12px;color:#aaa}
 .q-body{padding:1.25rem 1.5rem 0}
 .q-text{font-size:17px;font-weight:500;color:#111;line-height:1.55;margin-bottom:1.5rem}
 .opts{display:flex;flex-direction:column;gap:9px;padding:0 1.5rem}
 .opt{background:#fff;border:1.5px solid #e8e8e6;border-radius:11px;padding:.875rem 1rem;text-align:left;cursor:pointer;font-size:14px;color:#222;display:flex;align-items:center;gap:10px;transition:all .12s;line-height:1.4}
-.opt:hover{background:#f8f7fe;border-color:#b3aee8}
-.opt.sel{border:2px solid #534AB7;background:#f2f1fe;color:#3a3398}
+.opt:hover{background:#f8f7fe;border-color:#a8d42a}
+.opt.sel{border:2px solid #C8F135;background:#f4fce6;color:#2a4a00}
 .opt-num{font-size:11px;font-weight:600;color:#bbb;min-width:18px;flex-shrink:0}
-.opt.sel .opt-num{color:#534AB7}
+.opt.sel .opt-num{color:#1a1a1a}
 .nav{display:flex;gap:10px;padding:1.5rem 1.5rem 0}
 .btn-back{flex:0 0 auto;padding:.8rem 1.25rem;border-radius:10px;border:1.5px solid #e5e5e3;cursor:pointer;font-size:14px;background:#fff;color:#555}
-.btn-next{flex:1;padding:.8rem;border-radius:10px;border:none;cursor:pointer;font-size:15px;font-weight:600;background:#534AB7;color:#fff;transition:background .15s}
+.btn-next{flex:1;padding:.8rem;border-radius:10px;border:none;cursor:pointer;font-size:15px;font-weight:600;background:#C8F135;color:#111;transition:background .15s}
 .btn-next:disabled{background:#c8c6e8;cursor:not-allowed}
 .btn-back:disabled{opacity:.4;cursor:not-allowed}
 
 /* Results */
 .res-logo-wrap{background:#fff;padding:1.5rem;text-align:center;border-bottom:1px solid #f0f0ee}
 .res-logo{max-width:120px}
-.res-hero{background:linear-gradient(135deg,#534AB7 0%,#7B72D4 100%);padding:2rem 1.5rem;text-align:center}
-.res-eyebrow{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.5rem}
-.res-name{font-size:24px;font-weight:700;color:#fff;margin-bottom:.6rem}
-.res-desc{font-size:13px;color:rgba(255,255,255,.85);line-height:1.65;max-width:360px;margin:0 auto}
+.res-hero{background:linear-gradient(135deg,#C8F135 0%,#a8d42a 100%);padding:2rem 1.5rem;text-align:center}
+.res-eyebrow{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,0.5);margin-bottom:.5rem}
+.res-name{font-size:24px;font-weight:700;color:#111;margin-bottom:.6rem}
+.res-desc{font-size:13px;color:rgba(0,0,0,0.7);line-height:1.65;max-width:360px;margin:0 auto}
 .res-body{padding:1.5rem}
 .sec-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#888;margin-bottom:.875rem}
 .gift-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .gift-name{font-size:13px;font-weight:500;color:#222;width:115px;flex-shrink:0}
 .gift-track{flex:1;height:7px;background:#eeeef0;border-radius:4px}
-.gift-bar{height:7px;border-radius:4px;background:#534AB7;transition:width .6s ease}
+.gift-bar{height:7px;border-radius:4px;background:#C8F135;transition:width .6s ease}
 .gift-rank{font-size:12px;color:#aaa;min-width:24px;text-align:right}
 .teams-section{margin-top:1.5rem}
 .team-card{background:#fff;border:1.5px solid #ebebea;border-radius:13px;padding:1.1rem 1.25rem;margin-bottom:.875rem}
-.team-card.best{border-left:4px solid #534AB7;border-color:#534AB7}
-.team-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#534AB7;background:#f2f1fe;padding:.25rem .65rem;border-radius:20px;margin-bottom:.6rem}
+.team-card.best{border-left:4px solid #C8F135;border-color:#1a1a1a}
+.team-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a1a1a;background:#f4fce6;padding:.25rem .65rem;border-radius:20px;margin-bottom:.6rem}
 .team-badge.b2{color:#2d8a5e;background:#e3f5ed}
 .team-badge.b3{color:#7a5a00;background:#fef3d0}
 .team-head{display:flex;align-items:center;gap:8px;margin-bottom:.3rem}
@@ -75,21 +75,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .team-why{font-size:13px;color:#444;line-height:1.55}
 .disc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
 .disc-card{background:#f8f8f7;border-radius:10px;padding:.875rem;text-align:center}
-.disc-card.pri{background:#f2f1fe}
-.disc-letter{font-size:24px;font-weight:700;color:#534AB7;line-height:1}
+.disc-card.pri{background:#f4fce6}
+.disc-letter{font-size:24px;font-weight:700;color:#1a1a1a;line-height:1}
 .disc-card:not(.pri) .disc-letter{color:#888}
 .disc-label{font-size:11px;color:#888;margin-top:.25rem}
-.disc-card.pri .disc-label{color:#7B72D4}
+.disc-card.pri .disc-label{color:#1a1a1a}
 .cta-btn{width:100%;padding:.9rem;border:1.5px solid #e5e5e3;border-radius:11px;background:#fff;color:#333;font-size:13px;cursor:pointer;margin-top:.5rem;font-weight:500}
 .cta-btn:hover{background:#f8f7fe}
 .res-footer{text-align:center;padding:1rem 1.5rem 2rem;font-size:11px;color:#bbb;line-height:1.6}
 .gifts-detail-section{margin-top:1.5rem}
 .gift-detail-card{border:1.5px solid #ebebea;border-radius:13px;padding:1.1rem 1.25rem;margin-bottom:.875rem;background:#fff}
-.gift-detail-name{font-size:15px;font-weight:700;color:#534AB7;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
+.gift-detail-name{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:.35rem;display:flex;align-items:center;gap:8px}
 .gift-detail-icon{font-size:18px}
 .gift-detail-desc{font-size:13px;color:#444;line-height:1.65;margin-bottom:.5rem}
 .gift-detail-scripture{font-size:12px;color:#888;font-style:italic;line-height:1.5;border-left:3px solid #e8e6fe;padding-left:.75rem;margin-top:.5rem}
-.gift-detail-howto{font-size:12px;color:#534AB7;font-weight:500;margin-top:.5rem}
+.gift-detail-howto{font-size:12px;color:#1a1a1a;font-weight:500;margin-top:.5rem}
 </style>
 </head>
 <body>
@@ -406,28 +406,28 @@ function showResults(){
 }
 
 var GIFT_DEFS={
-  "Leadership":{icon:"⚡",desc:"You have a God-given ability to influence, guide, and mobilize people toward a vision. Leaders don't just manage — they inspire. You set direction, make decisions, and help others discover their potential.",scripture:"Romans 12:8 — If God has given you leadership ability, take the responsibility seriously.",howto:"Look for roles where you can cast vision and lead a team."},
-  "Teaching":{icon:"📖",desc:"You have a supernatural ability to understand God's Word and communicate it in ways that are clear, practical, and life-changing. People learn and grow when you explain truth.",scripture:"Ephesians 4:11-12 — Christ gave the teachers to equip his people for works of service.",howto:"Look for roles where you can communicate, explain, or disciple others."},
-  "Service":{icon:"🙌",desc:"You have a gift for identifying practical needs and meeting them with joy — often behind the scenes. You don't need recognition. You simply love serving, and you do it with excellence.",scripture:"Romans 12:7 — If your gift is serving others, serve them well.",howto:"Look for roles that involve setup, logistics, and hands-on support."},
-  "Mercy":{icon:"💛",desc:"You feel the pain of others deeply and are compelled to bring comfort and compassion. You create safe spaces where people feel seen, heard, and genuinely loved without judgment.",scripture:"Romans 12:8 — If you have a gift for showing kindness to others, do it gladly.",howto:"Look for roles that involve caring for people in vulnerable moments."},
-  "Hospitality":{icon:"🏡",desc:"You have a supernatural ability to make people feel genuinely welcomed and at home — whether in a building, a conversation, or a cup of coffee. You help people feel like they belong before they even know it.",scripture:"Romans 12:13 — Always be eager to practice hospitality.",howto:"Look for roles centered on welcoming, hosting, and creating warm environments."},
-  "Giving":{icon:"🎁",desc:"You experience real joy in generously giving your time, resources, and finances to advance God's Kingdom. You see giving not as a duty but as a privilege — and you do it with a cheerful heart.",scripture:"2 Corinthians 9:7 — God loves a person who gives cheerfully.",howto:"Look for roles where you can resource and support the mission."},
-  "Administration":{icon:"📋",desc:"You have a God-given ability to organize people, processes, and details so that the mission moves forward efficiently. You bring order where there is chaos and help teams function at their best.",scripture:"1 Corinthians 14:40 — Be sure that everything is done properly and in order.",howto:"Look for roles that involve planning, organizing, or managing systems."},
-  "Evangelism":{icon:"🌍",desc:"You have a burning passion for people who don't yet know Jesus. You find it natural to start spiritual conversations, share your testimony, and invite people into a relationship with God.",scripture:"Ephesians 4:11 — Christ gave the evangelists to equip his people for works of service.",howto:"Look for roles that put you in front of new people and first-time guests."},
+  "Leadership":{icon:"⚡",desc:"You have a God-given ability to influence, guide, and mobilize people toward a vision. Leaders don't just manage — they inspire. You set direction, make decisions, and help others discover their potential.",scripture:"Romans 12:8 — If God has given you leadership ability, take the responsibility seriously.",howto:"Look for roles where you can cast vision and lead a team.",everyday:"At work, step up to lead projects and speak up in meetings. At home, set the tone for your household through intentional decisions and loving authority. In everyday life, be the person who organizes and rallies people around a common goal."},
+  "Teaching":{icon:"📖",desc:"You have a supernatural ability to understand God's Word and communicate it in ways that are clear, practical, and life-changing. People learn and grow when you explain truth.",scripture:"Ephesians 4:11-12 — Christ gave the teachers to equip his people for works of service.",howto:"Look for roles where you can communicate, explain, or disciple others.",everyday:"At work, mentor colleagues, lead training sessions, or explain complex ideas simply. At home, lead family devotionals or help your kids understand faith. In everyday life, look for moments to share what you know with people who are searching."},
+  "Service":{icon:"🙌",desc:"You have a gift for identifying practical needs and meeting them with joy — often behind the scenes. You don't need recognition. You simply love serving, and you do it with excellence.",scripture:"Romans 12:7 — If your gift is serving others, serve them well.",howto:"Look for roles that involve setup, logistics, and hands-on support.",everyday:"At work, be the person who picks up the slack without being asked. At home, serve your family through acts of care and consistency. In everyday life, keep your eyes open for practical needs around you and meet them quietly."},
+  "Mercy":{icon:"💛",desc:"You feel the pain of others deeply and are compelled to bring comfort and compassion. You create safe spaces where people feel seen, heard, and genuinely loved without judgment.",scripture:"Romans 12:8 — If you have a gift for showing kindness to others, do it gladly.",howto:"Look for roles that involve caring for people in vulnerable moments.",everyday:"At work, check in on coworkers who seem off and create a culture of care. At home, be quick to listen and slow to judge when family members are struggling. In everyday life, sit with people in their pain — your presence is a gift."},
+  "Hospitality":{icon:"🏡",desc:"You have a supernatural ability to make people feel genuinely welcomed and at home — whether in a building, a conversation, or a cup of coffee. You help people feel like they belong before they even know it.",scripture:"Romans 12:13 — Always be eager to practice hospitality.",howto:"Look for roles centered on welcoming, hosting, and creating warm environments.",everyday:"At work, welcome new team members and make the office feel warm. At home, open your space to others — host dinners, gatherings, and people who need community. In everyday life, introduce yourself first and make others feel like they matter."},
+  "Giving":{icon:"🎁",desc:"You experience real joy in generously giving your time, resources, and finances to advance God's Kingdom. You see giving not as a duty but as a privilege — and you do it with a cheerful heart.",scripture:"2 Corinthians 9:7 — God loves a person who gives cheerfully.",howto:"Look for roles where you can resource and support the mission.",everyday:"At work, be generous with your time, knowledge, and recognition — lift others up freely. At home, model generosity for your family through tithing, giving, and helping others. In everyday life, look for opportunities to give unexpectedly — a meal, a resource, your time — and do it with joy."},
+  "Administration":{icon:"📋",desc:"You have a God-given ability to organize people, processes, and details so that the mission moves forward efficiently. You bring order where there is chaos and help teams function at their best.",scripture:"1 Corinthians 14:40 — Be sure that everything is done properly and in order.",howto:"Look for roles that involve planning, organizing, or managing systems.",everyday:"At work, be the person who creates systems, tracks details, and keeps projects on schedule. At home, bring order through routines, budgeting, and family planning. In everyday life, use your organizational skills to help others who feel overwhelmed."},
+  "Evangelism":{icon:"🌍",desc:"You have a burning passion for people who don't yet know Jesus. You find it natural to start spiritual conversations, share your testimony, and invite people into a relationship with God.",scripture:"Ephesians 4:11 — Christ gave the evangelists to equip his people for works of service.",howto:"Look for roles that put you in front of new people and first-time guests.",everyday:"At work, be intentional about building real relationships and sharing your story when the moment is right. At home, pray for your neighbors and look for open doors. In everyday life, invite people to church — your personal invitation is more powerful than any ad."},
   "Faith":{icon:"🔥",desc:"You have an extraordinary ability to trust God even when circumstances say otherwise. Your faith lifts the faith of everyone around you, and you believe God for things that seem impossible.",scripture:"1 Corinthians 12:9 — The same Spirit gives great faith to another.",howto:"Look for roles that require boldness, intercession, and believing God for breakthrough."},
-  "Discernment":{icon:"👁",desc:"You have a Spirit-given ability to distinguish truth from error and sense what is spiritually happening beneath the surface. You protect the body of Christ and help people stay grounded in truth.",scripture:"1 John 4:1 — Test the spirits to see whether they are from God.",howto:"Look for roles in prayer, leadership support, and spiritual protection."},
-  "Exhortation":{icon:"💬",desc:"You have a gift for coming alongside people and calling out the best in them. Whether it's a word of encouragement, a challenge, or a practical next step — people walk away from conversations with you feeling stronger.",scripture:"Romans 12:8 — If your gift is to encourage others, be encouraging.",howto:"Look for roles where you interact with and pour into people directly."},
-  "Wisdom":{icon:"🌿",desc:"God gives you the ability to apply biblical truth to real-life situations in ways that bring clarity and direction. People seek you out because your perspective cuts through confusion and points to what actually matters.",scripture:"James 1:5 — If you need wisdom, ask our generous God, and he will give it to you.",howto:"Look for roles in leadership, counseling, and decision-making."},
-  "Intercession":{icon:"🙏",desc:"You feel a deep, sustained call to pray for people, situations, and the church. Prayer isn't a discipline you have to force — it's something you are genuinely drawn to, and you believe God moves when you intercede.",scripture:"1 Timothy 2:1 — Pray for all people. Ask God to help them; intercede on their behalf.",howto:"Look for roles in prayer ministry and spiritual covering for the church."},
-  "Creative Arts":{icon:"🎨",desc:"God has wired you to express His truth and beauty through creative expression — music, design, writing, video, photography, or storytelling. Your creativity is not just talent; it's a spiritual gift that moves people toward God.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in worship, media, social content, and creative environments."},
-  "Technical":{icon:"🎛",desc:"You have a God-given ability and passion for using technology and technical systems to advance the mission. Whether it's sound, lighting, video, or digital tools — you help the message land with excellence.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in production, media, and technical support."},
-  "Languages":{icon:"🌐",desc:"You have a heart and gift for crossing cultural and language barriers so that everyone can experience the Gospel. You help the church truly reflect the diversity of God's Kingdom.",scripture:"Acts 2:6 — Everyone came running and they were amazed to hear their own languages being spoken by the believers.",howto:"Look for roles in translation, multicultural outreach, and community bridge-building."},
-  "Children":{icon:"⭐",desc:"God has given you a special love and ability to nurture the spiritual growth of children. You have the patience, creativity, and heart to help kids encounter Jesus at a young age — and those seeds last a lifetime.",scripture:"Matthew 19:14 — Jesus said, Let the children come to me. The Kingdom of Heaven belongs to those who are like these children.",howto:"Look for roles in Kids Ministry and Buddies."},
-  "Special Needs":{icon:"♥",desc:"You have a rare and beautiful gift — a specific calling to love, serve, and advocate for people with disabilities and special needs. You see their dignity, their value, and their place in the body of Christ.",scripture:"1 Corinthians 12:22 — Some parts of the body that seem weakest and least important are actually the most necessary.",howto:"Look for roles in Buddies Ministry serving kids and families with special needs."},
-  "Youth":{icon:"💥",desc:"God has given you a supernatural connection with teenagers. You remember what it felt like to be young, searching, and unsure — and you want to be the voice of truth and grace that points them to Jesus.",scripture:"1 Timothy 4:12 — Don't let anyone think less of you because you are young. Be an example to all believers.",howto:"Look for roles in Youth Ministry."},
-  "Dance":{icon:"🕊",desc:"God has wired you to worship through movement. Dance is not just performance for you — it is an act of praise. You use your body as an instrument to glorify God and lead others into His presence.",scripture:"Psalm 149:3 — Let them praise his name with dancing and make music to him with timbrel and harp.",howto:"Look for a role on the Moves team."},
-  "Outreach":{icon:"🤝",desc:"You feel a deep calling to serve people outside the church walls. Whether it is volunteering, community service, or acts of practical love — you want the world to experience the kindness of God through your hands.",scripture:"Matthew 25:35 — I was hungry and you gave me food, I was a stranger and you welcomed me.",howto:"Look for a role on the Cares team."},
-  "Virtual":{icon:"💻",desc:"You have a heart for people who experience church online. You understand that the virtual congregation is just as real and just as important — and you are gifted at making people feel connected, seen, and cared for through a screen.",scripture:"Acts 2:17 — I will pour out my Spirit on all people — everywhere, in every generation.",howto:"Look for a role on the Virtual Experience team."}
+  "Discernment":{icon:"👁",desc:"You have a Spirit-given ability to distinguish truth from error and sense what is spiritually happening beneath the surface. You protect the body of Christ and help people stay grounded in truth.",scripture:"1 John 4:1 — Test the spirits to see whether they are from God.",howto:"Look for roles in prayer, leadership support, and spiritual protection.",everyday:"At work, trust your instincts when something feels off and speak up wisely. At home, guard the spiritual atmosphere and be intentional about what your family consumes. In everyday life, pray before making big decisions and help others test what they are hearing."},
+  "Exhortation":{icon:"💬",desc:"You have a gift for coming alongside people and calling out the best in them. Whether it's a word of encouragement, a challenge, or a practical next step — people walk away from conversations with you feeling stronger.",scripture:"Romans 12:8 — If your gift is to encourage others, be encouraging.",howto:"Look for roles where you interact with and pour into people directly.",everyday:"At work, be the teammate who hypes people up and reminds them of their potential. At home, speak life over your family daily — your words carry weight. In everyday life, send that encouraging text, make that call, and never let a good thought about someone go unsaid."},
+  "Wisdom":{icon:"🌿",desc:"God gives you the ability to apply biblical truth to real-life situations in ways that bring clarity and direction. People seek you out because your perspective cuts through confusion and points to what actually matters.",scripture:"James 1:5 — If you need wisdom, ask our generous God, and he will give it to you.",howto:"Look for roles in leadership, counseling, and decision-making.",everyday:"At work, be a voice of reason in stressful or complex situations. At home, seek God before making major family decisions and share what you sense. In everyday life, be the friend people call when they need real perspective — not just an echo."},
+  "Intercession":{icon:"🙏",desc:"You feel a deep, sustained call to pray for people, situations, and the church. Prayer isn't a discipline you have to force — it's something you are genuinely drawn to, and you believe God moves when you intercede.",scripture:"1 Timothy 2:1 — Pray for all people. Ask God to help them; intercede on their behalf.",howto:"Look for roles in prayer ministry and spiritual covering for the church.",everyday:"At work, pray over your workspace, your colleagues, and the atmosphere before you start each day. At home, establish a culture of prayer in your household. In everyday life, when someone shares a need — stop and pray with them right then and there."},
+  "Creative Arts":{icon:"🎨",desc:"God has wired you to express His truth and beauty through creative expression — music, design, writing, video, photography, or storytelling. Your creativity is not just talent; it's a spiritual gift that moves people toward God.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in worship, media, social content, and creative environments.",everyday:"At work, bring creativity into your projects and presentations. At home, use your gifts to create a beautiful, intentional environment. In everyday life, use your art to tell God's story — a photo, a song, a caption, or a design can change someone's day."},
+  "Technical":{icon:"🎛",desc:"You have a God-given ability and passion for using technology and technical systems to advance the mission. Whether it's sound, lighting, video, or digital tools — you help the message land with excellence.",scripture:"Exodus 31:3 — I have filled him with the Spirit of God, giving him great wisdom and expertise in all kinds of crafts.",howto:"Look for roles in production, media, and technical support.",everyday:"At work, be the person who solves tech problems and improves systems. At home, use your skills to make life run more efficiently for your family. In everyday life, volunteer your technical skills for community events, nonprofits, and people who need help."},
+  "Languages":{icon:"🌐",desc:"You have a heart and gift for crossing cultural and language barriers so that everyone can experience the Gospel. You help the church truly reflect the diversity of God's Kingdom.",scripture:"Acts 2:6 — Everyone came running and they were amazed to hear their own languages being spoken by the believers.",howto:"Look for roles in translation, multicultural outreach, and community bridge-building.",everyday:"At work, advocate for inclusion and bridge cultural gaps on your team. At home, expose your family to diverse cultures and perspectives. In everyday life, be a connector between communities that would not otherwise interact."},
+  "Children":{icon:"⭐",desc:"God has given you a special love and ability to nurture the spiritual growth of children. You have the patience, creativity, and heart to help kids encounter Jesus at a young age — and those seeds last a lifetime.",scripture:"Matthew 19:14 — Jesus said, Let the children come to me. The Kingdom of Heaven belongs to those who are like these children.",howto:"Look for roles in Kids Ministry and Buddies.",everyday:"At work, mentor younger team members or interns. At home, be intentional about building faith foundations with the children in your life. In everyday life, show up for the kids in your neighborhood and family — they are watching everything you do."},
+  "Special Needs":{icon:"♥",desc:"You have a rare and beautiful gift — a specific calling to love, serve, and advocate for people with disabilities and special needs. You see their dignity, their value, and their place in the body of Christ.",scripture:"1 Corinthians 12:22 — Some parts of the body that seem weakest and least important are actually the most necessary.",howto:"Look for roles in Buddies Ministry serving kids and families with special needs.",everyday:"At work, advocate for accessibility and inclusion for colleagues with different abilities. At home, teach your family to see and honor the dignity in every person. In everyday life, be a voice for those who are overlooked and an advocate for those who need one."},
+  "Youth":{icon:"💥",desc:"God has given you a supernatural connection with teenagers. You remember what it felt like to be young, searching, and unsure — and you want to be the voice of truth and grace that points them to Jesus.",scripture:"1 Timothy 4:12 — Don't let anyone think less of you because you are young. Be an example to all believers.",howto:"Look for roles in Youth Ministry.",everyday:"At work, mentor young professionals and be the kind of leader you wish you had. At home, stay connected to the teenagers in your family — keep the lines of communication open. In everyday life, be consistent and authentic — teens can spot a fake from a mile away."},
+  "Dance":{icon:"🕊",desc:"God has wired you to worship through movement. Dance is not just performance for you — it is an act of praise. You use your body as an instrument to glorify God and lead others into His presence.",scripture:"Psalm 149:3 — Let them praise his name with dancing and make music to him with timbrel and harp.",howto:"Look for a role on the Moves team.",everyday:"At work, bring expressive energy into collaborative and creative spaces. At home, use movement as a way to worship and decompress. In everyday life, do not be afraid to let your joy be visible — your freedom in worship gives others permission to express themselves too."},
+  "Outreach":{icon:"🤝",desc:"You feel a deep calling to serve people outside the church walls. Whether it is volunteering, community service, or acts of practical love — you want the world to experience the kindness of God through your hands.",scripture:"Matthew 25:35 — I was hungry and you gave me food, I was a stranger and you welcomed me.",howto:"Look for a role on the Cares team.",everyday:"At work, look for ways to give back through company volunteer days or community initiatives. At home, get your family involved in serving others — make generosity a lifestyle. In everyday life, carry gift cards, water bottles, or snacks to give to people in need when you encounter them."},
+  "Virtual":{icon:"💻",desc:"You have a heart for people who experience church online. You understand that the virtual congregation is just as real and just as important — and you are gifted at making people feel connected, seen, and cared for through a screen.",scripture:"Acts 2:17 — I will pour out my Spirit on all people — everywhere, in every generation.",howto:"Look for a role on the Virtual Experience team.",everyday:"At work, bring the same warmth and intentionality to video calls and digital communication that others bring in person. At home, stay connected with long-distance family and friends with purpose. In everyday life, use your online platforms to encourage, point people to faith, and build genuine community."}
 };
 
 function renderGiftDetails(sortedGifts){
@@ -445,7 +445,7 @@ function renderGiftDetails(sortedGifts){
     card.innerHTML='<div class="gift-detail-name"><span class="gift-detail-icon">'+def.icon+'</span>'+g+'</div>'
       +'<div class="gift-detail-desc">'+def.desc+'</div>'
       +'<div class="gift-detail-scripture">'+def.scripture+'</div>'
-      +'<div class="gift-howto" style="font-size:12px;color:#534AB7;font-weight:600;margin-top:.6rem">→ '+def.howto+'</div>';
+      +'<div class="gift-howto" style="font-size:12px;color:#1a1a1a;font-weight:600;margin-top:.6rem">→ On the Dream Team: '+def.howto+(def.everyday?'<div style="font-size:12px;color:#444;line-height:1.6;margin-top:.6rem;padding:.6rem;background:#f9f9f7;border-radius:8px"><strong style="color:#111">In everyday life: </strong>'+def.everyday+'</div>':'');
     section.appendChild(card);
   });
   return section;
